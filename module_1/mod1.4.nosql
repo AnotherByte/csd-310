@@ -1,0 +1,46 @@
+{
+    "user":
+    {
+        "id": 1,
+        "name": "Chris",
+        "roles": [
+            {
+                "roleId": 5
+                "title": "Programmer"
+            },
+            {
+                "roleId": 7
+                "title": "UI Designer"
+            }
+        ]
+    }
+}
+
+
+{
+    "user":
+    {
+        "id": 1,
+        "name": "Chris",
+        "birthday": [{"date": 12/20/1991}]
+    }
+}
+
+
+{
+    "user":
+    {
+        "id": 1,
+        "name": "Chris",
+        "dependents": [
+            {
+                "dependentId": 12,
+                "name": "John"
+            },
+            {
+                "dependentId": 15,
+                "name": "Jane"
+            }
+        ]
+    }
+}

@@ -1,0 +1,90 @@
+{
+    "name": "Random House",
+    "code": "343",
+    "address": "100 Main Street",
+    "books": [
+        {
+            "isbn": "1-4028-9462-7",
+            "name": "How to Build a Boat",
+            "price": "20.66"
+        },
+        {
+            "isbn": "1-4065-3856-6",
+            "name": "How to Build a Shed",
+            "price": "22.34"
+        }        
+    ]
+},
+{
+    "name": "Blue Penguin",
+    "code": "541",
+    "address": "222 Newberry Ave",
+    "books": [
+        {
+            "isbn": "1-5098-3452-7",
+            "name": "The Man in the Castele",
+            "price": "12.44"
+        },
+        {
+            "isbn": "1-5034-5793-6",
+            "name": "The Lady Who Lived in a Shoe",
+            "price": "13.22"
+        },
+        {
+            "isbn": "1-5041-6471-5",
+            "name": "Three Blind Mice",
+            "price": "12.14"
+        }        
+    ]
+}
+
+
+{
+    "first_name": "Matthew",
+    "last_name": "Davis",
+    "phone": "555 555 0123",
+    "email": "mdavis@yahoo.com",
+    "books": [
+        {
+            "isbn": "1-4028-9462-7",
+            "name": "How to Build a Boat",
+            "price": "20.66"
+        },
+        {
+            "isbn": "1-4065-3856-6",
+            "name": "How to Build a Shed",
+            "price": "22.34"
+        }
+    ]
+},
+{
+    "first_name": "Marisha",
+    "last_name": "Lawson",
+    "phone": "555 444 7890",
+    "email": "lawsonwrites@hotmail.com",
+    "books": [
+        {
+            "isbn": "1-5098-3452-7",
+            "name": "The Man in the Castele",
+            "price": "12.44"
+        },
+        {
+            "isbn": "1-5034-5793-6",
+            "name": "The Lady Who Lived in a Shoe",
+            "price": "13.22"
+        }
+    ]
+},
+{
+    "first_name": "Liam",
+    "last_name": "O'Brian",
+    "phone": "555 777 4327",
+    "email": "liamobrian@google.com",
+    "books": [
+        {
+            "isbn": "1-5041-6471-5",
+            "name": "Three Blind Mice",
+            "price": "12.14"
+        }
+    ]
+}

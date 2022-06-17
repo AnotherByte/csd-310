@@ -1,0 +1,113 @@
+Student fields
+student_id
+first_name
+last_name
+Enrollment fields
+term
+gpa
+start_date
+end_date
+Course fields
+course_id
+description
+instructor
+grade
+
+{
+    "student_id": 123,
+    "first_name": "Chris",
+    "last_name": "Beatty",
+    "enrollments": [
+        {
+            "enrollment_id": 45,
+            "term": 2,
+            "gpa": 3.75,
+            "start_date": 5/20/2022,
+            "end_date": 8/1/2022,
+            "courses": [
+                {
+                    "course_id": 203,
+                    "description": "Application UI Design",
+                    "instructor": "John Smith",
+                    "grade": 96%
+                },
+                {
+                    "course_id": 204,
+                    "description": "Database Structures",
+                    "instructor": "Laura Bailey",
+                    "grade": 94%
+                }
+            ]
+        },
+        {
+            "enrollment_id": 46,
+            "term": 3,
+            "gpa": 3.62,
+            "start_date": 8/10/2022,
+            "end_date": 11/28/2022,
+            "courses": [
+                {
+                    "course_id": 212,
+                    "description": "Advanced Java Programming",
+                    "instructor": "John Smith",
+                    "grade": 92%
+                },
+                {
+                    "course_id": 213,
+                    "description": "IT Support",
+                    "instructor": "Laura Bailey",
+                    "grade": 97%
+                }
+            ]
+        }
+    ]
+},
+{
+    "student_id": 127,
+    "first_name": "Ashley",
+    "last_name": "Johnson",
+    "enrollments": [
+        {
+            "enrollment_id": 67,
+            "term": 2,
+            "gpa": 3.42,
+            "start_date": 5/20/2022,
+            "end_date": 8/1/2022,
+            "courses": [
+                {
+                    "course_id": 203,
+                    "description": "Application UI Design",
+                    "instructor": "John Smith",
+                    "grade": 91%
+                },
+                {
+                    "course_id": 204,
+                    "description": "Database Structures",
+                    "instructor": "Laura Bailey",
+                    "grade": 88%
+                }
+            ]
+        },
+        {
+            "enrollment_id": 68,
+            "term": 3,
+            "gpa": 3.51,
+            "start_date": 8/10/2022,
+            "end_date": 11/28/2022,
+            "courses": [
+                {
+                    "course_id": 212,
+                    "description": "Advanced Java Programming",
+                    "instructor": "John Smith",
+                    "grade": 93%
+                },
+                {
+                    "course_id": 213,
+                    "description": "IT Support",
+                    "instructor": "Laura Bailey",
+                    "grade": 87%
+                }
+            ]
+        }
+    ]
+}
