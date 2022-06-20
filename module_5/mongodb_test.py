@@ -1,3 +1,8 @@
+'''
+Chris Beatty
+June 16, 2022
+Mod 5.2 - Connection Test
+'''
 #import pymongo
 from pymongo import MongoClient
 

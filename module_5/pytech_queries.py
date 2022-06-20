@@ -1,3 +1,8 @@
+'''
+Chris Beatty
+June 16, 2022
+Mod 5.3 - PyTech Queries
+'''
 #import pymongo
 from pymongo import MongoClient
 
