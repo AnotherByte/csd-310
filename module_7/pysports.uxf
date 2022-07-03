@@ -1,0 +1,18 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><element><id>UMLNote</id><coordinates><x>30</x><y>40</y><w>270</w><h>40</h></coordinates><panel_attributes>one TEAM can have many PLAYER(s)
+many PLAYER(s) can be assigned to one TEAM</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>60</x><y>90</y><w>90</w><h>70</h></coordinates><panel_attributes>Player fields
+player_id
+first_name
+last_name</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>190</x><y>90</y><w>80</w><h>70</h></coordinates><panel_attributes>Team fields
+team_id
+team_name
+mascot</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>230</y><w>160</w><h>70</h></coordinates><panel_attributes>_Player_
+--
+player_id
+first_name
+last_name</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>350</x><y>230</y><w>160</w><h>70</h></coordinates><panel_attributes>__Team__
+--
+team_id
+team_name
+mascot</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>260</y><w>190</w><h>40</h></coordinates><panel_attributes>lt=-&gt;&gt;
+m1=1.1
+m2=1.*</panel_attributes><additional_attributes>10;10;170;10</additional_attributes></element></diagram>
