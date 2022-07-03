@@ -1,3 +1,9 @@
+"""
+Chris Beatty
+July 3, 2022
+Mod 8.2 - MySQL/Python Test
+"""
+
 import mysql.connector
 from mysql.connector import errorcode
 
