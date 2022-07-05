@@ -23,7 +23,7 @@ try:
     cursor = db.cursor()
    
     #select query for players with join on team_id to show team_name
-    cursor.execute("SELECT player_id, first_name, last_name, team_name FROM player LEFT OUTER JOIN team ON player.team_id = team.team_id")
+    cursor.execute("SELECT player_id, first_name, last_name, team_name FROM player INNER JOIN team ON player.team_id = team.team_id")
     
     #fetch all player info using previous SELECT statement
     players = cursor.fetchall()
