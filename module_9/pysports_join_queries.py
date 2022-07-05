@@ -1,6 +1,6 @@
 """
 Chris Beatty
-July 3, 2022
+July 4, 2022
 Mod 9.2 - PySports Join Queries
 """
 
