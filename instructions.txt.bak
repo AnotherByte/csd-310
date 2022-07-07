@@ -1,0 +1,36 @@
+-- How To Setup Outland Adventures Database and Run init script
+
+-- in MySQL Command line run following lines
+
+create database outland_adventures;
+
+use outland_adventures;
+
+-- then you can follow the example given in module 8.2, pt 3 to run SQL script 
+-- I had trouble with that method so I used "\. " then drag the sql script file onto the command line window
+-- that should put the file path into the command line. hit enter and it will run or give errors
+
+\. ***drag script file***
+
+
+If you have issues, I can try and help over text or voice tomorrow, but I want to make sure this approach will work to "share" our database
+
+
+
+
+-- How To Setup Outland Adventures Database and Run Init Script
+
+-- in MySQL Command line run following lines
+
+create database outland_adventures;
+
+use outland_adventures;
+
+-- then you can follow the example given in module 8.2, pt 3 to run SQL script 
+-- I had trouble with that method so I used "\. " then drag the sql script file onto the command line window
+-- that should put the file path into the command line. hit enter and it will run or give errors
+
+\. ###drag script file### 
+
+
+If you have issues, I can try and help over text or voice tomorrow, but I want to make sure this approach will work to "share" our database

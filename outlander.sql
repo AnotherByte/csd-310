@@ -22,11 +22,11 @@ GRANT ALL PRIVILEGES ON outland_adventures.* TO'outlander_user'@'localhost';
 
 -- drop tables if they are present
 DROP TABLE IF EXISTS employee_job;
-DROP TABLE IF EXISTS employee_innoculation;
+DROP TABLE IF EXISTS employee_inoculation;
 DROP TABLE IF EXISTS employee_visa;
-DROP TABLE IF EXISTS customer_innoculation;
+DROP TABLE IF EXISTS customer_inoculation;
 DROP TABLE IF EXISTS customer_visa;
-DROP TABLE IF EXISTS destination_innoculation;
+DROP TABLE IF EXISTS destination_inoculation;
 DROP TABLE IF EXISTS destination_visa;
 DROP TABLE IF EXISTS employee_order;
 DROP TABLE IF EXISTS customer_order;
@@ -36,7 +36,7 @@ DROP TABLE IF EXISTS employee_trip;
 DROP TABLE IF EXISTS customer_trip;
 DROP TABLE IF EXISTS job_responsibility;
 DROP TABLE IF EXISTS visa;
-DROP TABLE IF EXISTS innoculation;
+DROP TABLE IF EXISTS inoculation;
 DROP TABLE IF EXISTS excursion;
 DROP TABLE IF EXISTS trip;
 DROP TABLE IF EXISTS destination;
@@ -77,11 +77,11 @@ CREATE TABLE employee_job (
         REFERENCES job_responsibility(job_responsibility_id)
 ); 
 
--- create the innoculation table 
-CREATE TABLE innoculation (
-    innoculation_id      	INT         	NOT NULL        AUTO_INCREMENT,
-    innoculation_type		VARCHAR(75)     NOT NULL,
-    PRIMARY KEY(innoculation_id)
+-- create the inoculationtable 
+CREATE TABLE inoculation (
+    inoculation_id      	INT         	NOT NULL        AUTO_INCREMENT,
+    inoculation_type		VARCHAR(75)     NOT NULL,
+    PRIMARY KEY(inoculation_id)
 );  
 
 -- create the visa table 
@@ -93,18 +93,18 @@ CREATE TABLE visa (
     PRIMARY KEY(visa_id)
 ); 
 
--- create the employee_innoculation table 
-CREATE TABLE employee_innoculation (
-    employee_innoculation_id 	INT         	NOT NULL        AUTO_INCREMENT,
+-- create the employee_inoculation table 
+CREATE TABLE employee_inoculation (
+    employee_inoculation_id 	INT         	NOT NULL        AUTO_INCREMENT,
     employee_id                 INT         	NOT NULL,
-    innoculation_id      	    INT         	NOT NULL,
+    inoculation_id      	    INT         	NOT NULL,
     date_administered		    DATE		    NOT NULL,
     date_expires			    DATE,
-    PRIMARY KEY(employee_innoculation_id),
+    PRIMARY KEY(employee_inoculation_id),
     FOREIGN KEY(employee_id)
         REFERENCES employee(employee_id),
-    FOREIGN KEY(innoculation_id)
-        REFERENCES innoculation(innoculation_id)
+    FOREIGN KEY(inoculation_id)
+        REFERENCES inoculation(inoculation_id)
 ); 
 
 -- create the employee_visa table 
@@ -130,18 +130,18 @@ CREATE TABLE customer (
     PRIMARY KEY(customer_id)
 ); 
 
--- create the customer_innoculation table 
-CREATE TABLE customer_innoculation (
-    customer_innoculation_id 	INT         	NOT NULL        AUTO_INCREMENT,
+-- create the customer_inoculation table 
+CREATE TABLE customer_inoculation (
+    customer_inoculation_id 	INT         	NOT NULL        AUTO_INCREMENT,
     customer_id                 INT         	NOT NULL,
-    innoculation_id      	    INT         	NOT NULL,
+    inoculation_id      	    INT         	NOT NULL,
     date_administered		    DATE		    NOT NULL,
     date_expires			    DATE,
-    PRIMARY KEY(customer_innoculation_id),
+    PRIMARY KEY(customer_inoculation_id),
     FOREIGN KEY(customer_id)
         REFERENCES customer(customer_id),
-    FOREIGN KEY(innoculation_id)
-        REFERENCES innoculation(innoculation_id)
+    FOREIGN KEY(inoculation_id)
+        REFERENCES inoculation(inoculation_id)
 ); 
 
 -- create the customer_visa table 
@@ -206,16 +206,16 @@ CREATE TABLE destination (
     PRIMARY KEY(destination_id)
 );    
 
--- create the destination_innoculation table 
-CREATE TABLE destination_innoculation (
-    destination_innoculation_id 	INT         	NOT NULL        AUTO_INCREMENT,
+-- create the destination_inoculation table 
+CREATE TABLE destination_inoculation (
+    destination_inoculation_id 	INT         	NOT NULL        AUTO_INCREMENT,
     destination_id                  INT         	NOT NULL,
-    innoculation_id      	        INT         	NOT NULL,
-    PRIMARY KEY(destination_innoculation_id),
+    inoculation_id      	        INT         	NOT NULL,
+    PRIMARY KEY(destination_inoculation_id),
     FOREIGN KEY(destination_id)
         REFERENCES destination(destination_id),
-    FOREIGN KEY(innoculation_id)
-        REFERENCES innoculation(innoculation_id)
+    FOREIGN KEY(inoculation_id)
+        REFERENCES inoculation(inoculation_id)
 ); 
 
 -- create the destination_visa table 

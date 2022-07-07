@@ -34,3 +34,13 @@ use outland_adventures;
 
 
 If you have issues, I can try and help over text or voice tomorrow, but I want to make sure this approach will work to "share" our database
+
+
+
+
+
+While working on the script and figuring out primary keys, foreign keys, and other table columns, I have had to make a few new tables. Most are just a "join" table with the new table's id and the id of each table from the many-to-many relationship. Some like the employee or customer visa have a visa number, and employee or customer innoculation have dates. All tables with two word titles are "join" tables except for the "Job Responsibility" table. Im happy to explain any part of that if it is confusing.
+
+
+
+Here is the SQL script that should remove any tables that have already been created and then create each table, the column titles, and any primary and foreign keys. If you ran a previous script, the table names may have changed and you may have to manually drop any left over tables. Please look over either the script text or the created tables in MySQL Workbench or someother tool and make sure I have correct fields, data types, primary keys, and foreign keys. I changed some column names and made some guesses on datatypes, but we should have all the data we need being tracked somewhere.
