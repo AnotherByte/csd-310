@@ -30,10 +30,11 @@ SELECT * FROM  trip_item;
 
 
 select employee.first_name, employee.last_name, employee.nick_name, employee.job_title, 
-job_responsibility.job_responsibility_id, job_responsibility.responsibility, job_responsibility.description 
+job_responsibility.responsibility, job_responsibility.description 
 from employee
 left outer join employee_job on employee.employee_id = employee_job.employee_id
-left outer join job_responsibility on employee_job.job_responsibility_id = job_responsibility.job_responsibility_id;
+left outer join job_responsibility on employee_job.job_responsibility_id = job_responsibility.job_responsibility_id
+order by employee.employee_id, job_responsibility.job_responsibility_id;
 
 select *
 from trip
