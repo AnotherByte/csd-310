@@ -170,7 +170,7 @@ CREATE TABLE item_type (
 CREATE TABLE item (
     item_id 		        INT             NOT NULL        AUTO_INCREMENT,
     item_type_id 		    INT             NOT NULL,
-    date_aquired		    DATE            NOT NULL,
+    date_acquired		    DATE            NOT NULL,
     date_expires		    DATE,
     last_maintenance		DATE,
     is_available    		BOOLEAN         NOT NULL,
@@ -519,7 +519,7 @@ INSERT INTO item_type(description)
 
 
 -- item insert statements
-INSERT INTO item(date_aquired, date_expires, item_type_id, last_maintenance, is_available)
+INSERT INTO item(date_acquired, date_expires, item_type_id, last_maintenance, is_available)
     VALUES('20180423', NULL, (SELECT item_type_id FROM item_type WHERE description = 'Trekking poles'), '20220115', TRUE),
         ('20180423', NULL, (SELECT item_type_id FROM item_type WHERE description = 'Trekking poles'), '20220115', TRUE),
         ('20180423', NULL, (SELECT item_type_id FROM item_type WHERE description = 'Trekking poles'), '20220115', TRUE),

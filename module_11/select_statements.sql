@@ -23,6 +23,9 @@ SELECT * FROM  excursion;
 SELECT * FROM  employee_trip;
 SELECT * FROM  customer_trip;
 
+SELECT * FROM  employee_order;
+SELECT * FROM  customer_order;
+
 SELECT * FROM  item_type;
 SELECT * FROM  item;
 SELECT * FROM  trip_item;
@@ -63,37 +66,37 @@ SELECT * FROM item_type;
 
 --age of all items
 SELECT I.item_id, IT.description,
-    DATEDIFF(CURDATE(), I.date_aquired) AS 'Age in Days',
-    DATEDIFF(CURDATE(), I.date_aquired)/365.25 AS 'Age in Years',
-    DATE_FORMAT(I.date_aquired,'%m/%d/%Y') AS 'Date Acquired'
+    DATEDIFF(CURDATE(), I.date_acquired) AS 'Age in Days',
+    DATEDIFF(CURDATE(), I.date_acquired)/365.25 AS 'Age in Years',
+    DATE_FORMAT(I.date_acquired,'%m/%d/%Y') AS 'Date Acquired'
 FROM item AS I
 JOIN item_type AS IT 
     ON i.item_type_id = IT.item_type_id
-ORDER BY I.date_aquired;
+ORDER BY I.date_acquired;
 
 --age of items over X years old
 SELECT I.item_id, IT.description,
-    DATEDIFF(CURDATE(), I.date_aquired) AS 'Age in Days',
-    DATEDIFF(CURDATE(), I.date_aquired)/365.25 AS 'Age in Years',
-    DATE_FORMAT(I.date_aquired,'%m/%d/%Y') AS 'Date Acquired'
+    DATEDIFF(CURDATE(), I.date_acquired) AS 'Age in Days',
+    DATEDIFF(CURDATE(), I.date_acquired)/365.25 AS 'Age in Years',
+    DATE_FORMAT(I.date_acquired,'%m/%d/%Y') AS 'Date Acquired'
 FROM item AS I
 JOIN item_type AS IT 
     ON i.item_type_id = IT.item_type_id
-WHERE (DATEDIFF(CURDATE(), I.date_aquired)/365.25) >= 4
-ORDER BY I.date_aquired;
+WHERE (DATEDIFF(CURDATE(), I.date_acquired)/365.25) >= 4
+ORDER BY I.date_acquired;
 
 --create procedure
 CREATE PROCEDURE OldItems (IN age int)
 BEGIN
     SELECT I.item_id, IT.description,
-        DATEDIFF(CURDATE(), I.date_aquired) AS 'Age in Days',
-        DATEDIFF(CURDATE(), I.date_aquired)/365.25 AS 'Age in Years',
-        DATE_FORMAT(I.date_aquired,'%m/%d/%Y') AS 'Date Acquired'
+        DATEDIFF(CURDATE(), I.date_acquired) AS 'Age in Days',
+        DATEDIFF(CURDATE(), I.date_acquired)/365.25 AS 'Age in Years',
+        DATE_FORMAT(I.date_acquired,'%m/%d/%Y') AS 'Date Acquired'
     FROM item AS I
     JOIN item_type AS IT 
         ON i.item_type_id = IT.item_type_id
-    WHERE (DATEDIFF(CURDATE(), I.date_aquired)/365.25) >= age
-    ORDER BY I.date_aquired;
+    WHERE (DATEDIFF(CURDATE(), I.date_acquired)/365.25) >= age
+    ORDER BY I.date_acquired;
 END
 
 CALL OldItems(4)
